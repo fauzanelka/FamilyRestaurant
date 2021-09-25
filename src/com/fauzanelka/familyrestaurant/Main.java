@@ -104,7 +104,7 @@ public class Main {
     }
 
     public static void deleteSpecialMenu() {
-        // TODO
+        System.out.println("Delete special menu test");
     }
 
     public static void main(String[] args) {
