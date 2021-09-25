@@ -14,9 +14,4 @@ public interface Storable {
   void removeRegularMenu(String code);
 
   void removeSpecialMenu(String code);
-
-  public enum MenuType {
-    RegularMenu,
-    SpecialMenu
-  }
 }
