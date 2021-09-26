@@ -9,7 +9,7 @@ Advanced Object Oriented Programming COMP6619036
 
 ## Run program
 
-Download latest binary from [releases](https://github.com/fauzanelka/FamilyRestaurant/releases)
+Download latest binary from [releases](https://github.com/fauzanelka/FamilyRestaurant/releases/latest)
 
 ```bash
 java -jar FamilyRestaurant.jar
