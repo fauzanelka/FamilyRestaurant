@@ -1,14 +1,14 @@
 package id.fauzanelka.familyrestaurant;
 
 import id.fauzanelka.familyrestaurant.util.Action;
-import id.fauzanelka.familyrestaurant.util.Storage;
+import id.fauzanelka.familyrestaurant.util.Store;
 
 import java.util.Collections;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class FamilyRestaurantCommand {
-  private Storage storage = Storage.getInstance();
+  private Store store = Store.getInstance();
 
   public void run() {
     Scanner sc = new Scanner(System.in);
@@ -30,7 +30,7 @@ public class FamilyRestaurantCommand {
         }
       } while (choice == null);
 
-      choice.execute(storage);
+      choice.execute(store);
     } while (choice != Action.Exit);
   }
 }

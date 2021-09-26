@@ -3,14 +3,14 @@ package id.fauzanelka.familyrestaurant.util;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Storage implements Storable {
-  private static Storage instance;
+public class Store implements Storable {
+  private static Store instance;
   protected Map<String, RegularMenu> regularMenuMap = new HashMap<>();
   protected Map<String, SpecialMenu> specialMenuMap = new HashMap<>();
 
-  public static Storage getInstance() {
+  public static Store getInstance() {
     if (instance == null) {
-      instance = new Storage();
+      instance = new Store();
     }
 
     return instance;

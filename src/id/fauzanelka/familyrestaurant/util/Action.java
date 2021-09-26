@@ -8,37 +8,37 @@ import java.util.Map;
 public enum Action implements Executable {
   AddRegularMenu(1, "Add Regular Menu") {
     @Override
-    public void execute(Storable storage) {
-      AddRegularMenuAction.getInstance().execute(storage);
+    public void execute(Storable store) {
+      AddRegularMenuAction.getInstance().execute(store);
     }
   },
   AddSpecialMenu(2, "Add Special Menu") {
     @Override
-    public void execute(Storable storage) {
-      AddSpecialMenuAction.getInstance().execute(storage);
+    public void execute(Storable store) {
+      AddSpecialMenuAction.getInstance().execute(store);
     }
   },
   ShowAllMenu(3, "Show All Menu") {
     @Override
-    public void execute(Storable storage) {
-      ShowAllMenuAction.getInstance().execute(storage);
+    public void execute(Storable store) {
+      ShowAllMenuAction.getInstance().execute(store);
     }
   },
   DeleteRegularMenu(4, "Delete Regular Menu") {
     @Override
-    public void execute(Storable storage) {
-      DeleteRegularMenuAction.getInstance().execute(storage);
+    public void execute(Storable store) {
+      DeleteRegularMenuAction.getInstance().execute(store);
     }
   },
   DeleteSpecialMenu(5, "Delete Special Menu") {
     @Override
-    public void execute(Storable storage) {
-      DeleteSpecialMenuAction.getInstance().execute(storage);
+    public void execute(Storable store) {
+      DeleteSpecialMenuAction.getInstance().execute(store);
     }
   },
   Exit(6, "Exit") {
     @Override
-    public void execute(Storable storage) {
+    public void execute(Storable store) {
       System.exit(0);
     }
   },

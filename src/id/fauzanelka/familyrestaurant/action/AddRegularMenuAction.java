@@ -17,7 +17,7 @@ public class AddRegularMenuAction implements Executable {
     return instance;
   }
 
-  public void execute(Storable storage) {
+  public void execute(Storable store) {
     Scanner sc = new Scanner(System.in);
     RegularMenu menu = new RegularMenu();
 
@@ -40,7 +40,7 @@ public class AddRegularMenuAction implements Executable {
       }
     } while (menu.getPrice() <= 10000 || menu.getPrice() >= 100000);
 
-    storage.addRegularMenu(menu.getCode(), menu);
+    store.addRegularMenu(menu.getCode(), menu);
     System.out.printf("%s%n%n", "Add success!");
   }
 }

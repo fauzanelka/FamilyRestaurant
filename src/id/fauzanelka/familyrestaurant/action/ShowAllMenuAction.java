@@ -17,7 +17,7 @@ public class ShowAllMenuAction implements Executable {
     return instance;
   }
 
-  public void execute(Storable storage) {
+  public void execute(Storable store) {
     System.out.printf("%s%n", "Regular Menu");
     System.out.printf("%s%n", String.join("", Collections.nCopies(56, "=")));
     System.out.printf(
@@ -29,8 +29,8 @@ public class ShowAllMenuAction implements Executable {
     );
     System.out.printf("%s%n", String.join("", Collections.nCopies(56, "=")));
     int menuIndex = 1;
-    if (storage.getRegularMenus().size() > 0) {
-      for (RegularMenu menu : storage.getRegularMenus().values()) {
+    if (store.getRegularMenus().size() > 0) {
+      for (RegularMenu menu : store.getRegularMenus().values()) {
         System.out.printf(
           "%-3d | %-4s | %-32s | %-6d |%n",
           menuIndex,
@@ -57,9 +57,9 @@ public class ShowAllMenuAction implements Executable {
       "Diskon"
     );
     menuIndex = 1;
-    if (storage.getSpecialMenus().size() > 0) {
+    if (store.getSpecialMenus().size() > 0) {
       System.out.printf("%s%n", String.join("", Collections.nCopies(67, "=")));
-      for (SpecialMenu menu : storage.getSpecialMenus().values()) {
+      for (SpecialMenu menu : store.getSpecialMenus().values()) {
         System.out.printf(
           "%-3d | %-4s | %-32s | %-6d | %-6d %% |%n",
           menuIndex,

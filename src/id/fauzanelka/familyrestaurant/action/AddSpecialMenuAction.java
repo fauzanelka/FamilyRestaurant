@@ -16,7 +16,7 @@ public class AddSpecialMenuAction implements Executable {
     return instance;
   }
 
-  public void execute(Storable storage) {
+  public void execute(Storable store) {
     Scanner sc = new Scanner(System.in);
     SpecialMenu menu = new SpecialMenu();
 
@@ -49,7 +49,7 @@ public class AddSpecialMenuAction implements Executable {
       }
     } while (!allowedDiscount.contains(menu.getDiscount()));
 
-    storage.addSpecialMenu(menu.getCode(), menu);
+    store.addSpecialMenu(menu.getCode(), menu);
     System.out.printf("%s%n%n", "Add success!");
   }
 }

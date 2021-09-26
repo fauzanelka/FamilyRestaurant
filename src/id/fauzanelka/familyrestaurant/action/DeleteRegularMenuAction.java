@@ -15,10 +15,10 @@ public class DeleteRegularMenuAction implements Executable {
     return instance;
   }
 
-  public void execute(Storable storage) {
+  public void execute(Storable store) {
     Scanner sc = new Scanner(System.in);
-    String menuCode = null;
-    boolean isMenuExist = false;
+    String menuCode;
+    boolean isMenuExist;
 
     do {
       do {
@@ -26,13 +26,13 @@ public class DeleteRegularMenuAction implements Executable {
         menuCode = sc.nextLine();
       } while (!menuCode.matches("R[0-9]\\d{2}$"));
 
-      isMenuExist = storage.getRegularMenus().containsKey(menuCode);
+      isMenuExist = store.getRegularMenus().containsKey(menuCode);
       if (!isMenuExist) {
         System.out.printf("%s%n", "Code is wrong!");
       }
     } while (!isMenuExist);
 
-    storage.removeRegularMenu(menuCode);
+    store.removeRegularMenu(menuCode);
     System.out.printf("%s%n%n", "Delete success!");
   }
 }
