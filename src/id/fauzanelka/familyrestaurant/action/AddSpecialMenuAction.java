@@ -44,7 +44,6 @@ public class AddSpecialMenuAction implements Executable {
       System.out.printf("%s", "Input menu discount [10% | 25% | 50%]: ");
       try {
         menu.setDiscount(((Integer) sc.nextInt()).doubleValue() / 100);
-        menu.setDiscount(0.1);
       } catch (InputMismatchException e) {
         sc.next();
       }

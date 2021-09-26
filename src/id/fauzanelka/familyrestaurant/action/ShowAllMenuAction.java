@@ -47,9 +47,9 @@ public class ShowAllMenuAction implements Executable {
     System.out.println();
 
     System.out.printf("%s%n", "Special Menu");
-    System.out.printf("%s%n", String.join("", Collections.nCopies(65, "=")));
+    System.out.printf("%s%n", String.join("", Collections.nCopies(67, "=")));
     System.out.printf(
-      "%-3s | %-4s | %-32s | %-6s | %-6s |%n",
+      "%-3s | %-4s | %-32s | %-6s | %-8s |%n",
       "No.",
       "Kode",
       "Nama",
@@ -58,15 +58,15 @@ public class ShowAllMenuAction implements Executable {
     );
     menuIndex = 1;
     if (storage.getSpecialMenus().size() > 0) {
-      System.out.printf("%s%n", String.join("", Collections.nCopies(65, "=")));
+      System.out.printf("%s%n", String.join("", Collections.nCopies(67, "=")));
       for (SpecialMenu menu : storage.getSpecialMenus().values()) {
         System.out.printf(
-          "%-3d | %-4s | %-32s | %-6d | %-6d |%n",
+          "%-3d | %-4s | %-32s | %-6d | %-6d %% |%n",
           menuIndex,
           menu.getCode(),
           menu.getName(),
           menu.getPrice(),
-          menu.getDiscount().intValue() * 100
+          (int)(menu.getDiscount() * 100)
         );
         ++menuIndex;
       }
