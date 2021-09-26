@@ -5,7 +5,7 @@ BINUS Online TK2
 Advanced Object Oriented Programming COMP6619036
 
 ## Prerequisites
-- Java 8
+- Java >= 8
 
 ## Run program
 
